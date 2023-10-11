@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+
+public class samples {
+	@GetMapping(value="/ss/{num1}/{num2}") 
+	public int add(@PathVariable int num1,@PathVariable int num2) {
+		return num1+num2;
+		
+	}
+	
+	@GetMapping(value="/getCar")
+	public List<Car> setCar(@RequestBody List<Car> c) {
+		for(int i=0;i<=0;i++) {
+		c.get(i).setBrand(c.get(i).getBrand()+"saroo");
+		}
+		return c;
+	}
+	}
+
+

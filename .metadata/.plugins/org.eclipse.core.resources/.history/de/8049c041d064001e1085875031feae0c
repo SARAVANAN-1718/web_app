@@ -1,0 +1,19 @@
+package com.example.bank.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.employee.entity.Employee;
+import com.example.employee.reprosity.EmployeeRepositary;
+
+public class Bankingdao {
+	@Autowired
+	BankRepositary bankRepo;
+
+	public Bank insert(int e) {
+		//empRepo.saveAll(e);
+		return bankRepo.saveAll(e);
+	}
+
+	
+
+}

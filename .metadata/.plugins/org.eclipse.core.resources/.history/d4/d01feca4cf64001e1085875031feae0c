@@ -1,0 +1,5 @@
+package com.example.bank.repositery;
+
+public class BankingRepositery extends JpaRepository<Bank,Integer> {
+
+}

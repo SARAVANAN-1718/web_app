@@ -1,0 +1,5 @@
+package com.example.employee.reprosity;
+
+public interface EmployeeRepositary extends JpaRepository<Employee,Integer> {
+
+}

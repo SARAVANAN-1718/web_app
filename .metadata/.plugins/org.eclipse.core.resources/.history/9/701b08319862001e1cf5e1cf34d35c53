@@ -1,0 +1,16 @@
+package com.example.employee.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.employee.dao.EmployeeDao;
+import com.example.employee.entity.Employee;
+
+@Service
+public class EmployeeService {
+    @Autowired 
+     EmployeeDao empDao;
+    public String insertEmployee(Employee e) {
+    	return empDao.insertEmployee(e);
+    }
+}

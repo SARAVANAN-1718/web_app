@@ -1,0 +1,12 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class ones {
+
+	@GetMapping(value = "/sar")
+	public String getone() {
+		return "hello world";
+
+	}
+}

@@ -1,0 +1,20 @@
+package com.example.employee.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.employee.entity.Employee;
+import com.example.employee.reprosity.EmployeeRepositary;
+@Repository
+public class EmployeeDao {
+	@Autowired
+	EmployeeRepositary empRepo;
+	
+
+		
+
+	public String insertEmployee(Employee e) {
+		empRepo.save(e);
+		return "sucess";
+	}
+}

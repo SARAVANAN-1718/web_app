@@ -1,0 +1,28 @@
+package com.example.bank.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.bank.entity.Bank;
+
+public class Bankingcontroller {
+	@RestController
+	@RequestMapping(value="/bank")
+		@Autowired
+		BankingService bankser;
+		//findby id
+		@GetMapping(value="/add/{e}")
+		
+		public Bank insert(@PathVariable int  e) {
+		
+			return bankser.insert(e); 
+		 
+		}
+
+	
+
+}
+

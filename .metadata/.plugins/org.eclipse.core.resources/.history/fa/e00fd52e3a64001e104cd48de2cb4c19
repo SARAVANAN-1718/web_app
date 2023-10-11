@@ -1,0 +1,9 @@
+ package com.example.employee.global;
+
+public class  NameNotFoundException extends Exception {
+	public NameNotFoundException(String  msg) {
+		super(msg);
+	}
+	
+
+}

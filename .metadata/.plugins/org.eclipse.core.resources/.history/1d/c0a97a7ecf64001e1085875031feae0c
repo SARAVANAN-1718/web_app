@@ -1,0 +1,12 @@
+package com.example.bank.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Bankingservice {
+	@Autowired
+	Bankingdao bankser;
+	
+	public Bank insert(int e) {
+		return bankser.insert;
+	}
+}

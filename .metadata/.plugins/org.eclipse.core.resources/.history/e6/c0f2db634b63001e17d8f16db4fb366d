@@ -1,0 +1,52 @@
+package com.example.employee.service;
+
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.employee.dao.EmployeeDao;
+import com.example.employee.entity.Employee;
+
+@Service
+public class EmployeeService {
+    @Autowired 
+     EmployeeDao empDao;
+    
+    //findby id
+    public Employee insertEmployee(int e) {
+    	return empDao.insertEmployee(e);
+    }
+    
+    //findall
+    
+    public List<Employee> insertEmployee1() {
+    	return empDao.insertEmployee1();
+    }
+    
+    //deleteid
+    
+    public String insertEmployee2(int e) {
+    	return empDao.insertEmployee2(e);
+    }
+    //update
+    
+    public String insertEmployee3(Employee e) {
+    	return empDao.insertEmployee3(e);
+    }
+    
+    //gender
+    public List<Employee>getByGender(String gender) {
+    	List<Employee>allEmp=this.insertEmployee1();
+    	return allEmp.stream().filter(x->x.getGender().equalsIgnoreCase(gender)).toList();
+    }
+    //max
+    public List<Employee>getmaxage(int age) {
+    	List<Employee>allEmp=this.insertEmployee1();
+    	return allEmp.stream().filter(a->a.getAge()>age).toList();
+    }
+    
+}
+

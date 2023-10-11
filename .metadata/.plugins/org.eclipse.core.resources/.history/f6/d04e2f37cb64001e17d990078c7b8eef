@@ -1,0 +1,7 @@
+package com.example.bank.repositery;
+
+import org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension;
+
+public class bankingrepositery extends JpaRepository {
+
+}

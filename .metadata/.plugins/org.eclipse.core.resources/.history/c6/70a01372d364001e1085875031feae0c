@@ -1,0 +1,30 @@
+package com.example.bank.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.bank.entity.Bank;
+import com.example.bank.service.BankingService;
+@RestController
+@RequestMapping(value="/bank")
+public class Bankingcontroller {
+	
+		@Autowired
+		BankingService bankser;
+		
+		@GetMapping(value="/add")
+		
+		public List<Bank> insert() {
+		
+			return bankser.insert(); 
+		 
+		}
+
+	
+
+}
+

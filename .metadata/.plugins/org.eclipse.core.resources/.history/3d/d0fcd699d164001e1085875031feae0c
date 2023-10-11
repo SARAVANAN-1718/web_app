@@ -1,0 +1,21 @@
+package com.example.bank.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.bank.entity.Bank;
+
+
+public class Bankingdao {
+	@Autowired
+	BankingRepositary bankRepo;
+
+	public List<Bank> insert() {
+		
+		return bankRepo.findAll();
+	}
+
+	
+
+}

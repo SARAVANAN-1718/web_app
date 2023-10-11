@@ -1,0 +1,8 @@
+package com.example.bank.repositery;
+
+import com.example.bank.entity.Bank;
+
+public class BankingRepositary extends JpaRepository<Bank,Integer> {
+	
+
+}
